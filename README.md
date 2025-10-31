@@ -4,11 +4,8 @@ A React Native mobile application built with Expo that tracks and displays the u
 
 ## 🎥 Video Preview
 
-Watch the app in action:
+Watch the app in action: [Click here to watch the demo](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
-[![LocationTracker Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-
-> **Note:** Replace `YOUR_VIDEO_ID` with your actual YouTube video ID after uploading
 
 ## ✨ Features
 
@@ -152,10 +149,6 @@ This project is open source and available for educational purposes.
 
 Feel free to fork this project and submit pull requests with improvements!
 
-## 📞 Support
-
-If you encounter any issues or have questions, please open an issue on the project repository.
-
 ---
 
-**Made with ❤️ using React Native and Expo**
+
