@@ -4,7 +4,7 @@ A React Native mobile application built with Expo that tracks and displays the u
 
 ## 🎥 Video Preview
 
-Watch the app in action: [Click here to watch the demo](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+Watch the app in action: [Click here to watch the demo](https://www.loom.com/share/b0f8fdf36236489da23a1f4d74309408)
 
 
 ## ✨ Features
