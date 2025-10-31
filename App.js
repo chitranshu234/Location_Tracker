@@ -1,11 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, StyleSheet, StatusBar } from 'react-native';
+import LoadingScreen from './src/components/LoadingScreen';
+import ErrorScreen from './src/components/ErrorScreen';
+import MapContainer from './src/components/MapContainer';
+import useLocation from './src/hooks/useLocation';
 
 export default function App() {
+  const { location, permissionStatus, errorMsg } = useLocation();
+
+  if (permissionStatus === 'pending') {
+    return <LoadingScreen message="Requesting permission..." icon="📍" />;
+  }
+
+  if (permissionStatus === 'denied') {
+    return <ErrorScreen errorMsg={errorMsg} />;
+  }
+
+  if (permissionStatus === 'granted' && !location) {
+    return <LoadingScreen message="Getting Your Location" icon="🗺️" />;
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
+      <MapContainer location={location} />
     </View>
   );
 }
@@ -13,8 +31,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#F5F7FA',
   },
 });
